@@ -1,18 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
+import { Link } from "react-router";
 import { Container } from "reactstrap";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Container>
+export default props => {
+  return (
+    <div className="App">
+      <Container>
+        <div className="mb-30">
           <h1 className="pt-10">Books app</h1>
-          {this.props.children}
-        </Container>
-      </div>
-    );
-  }
-}
-
-export default App;
+          <Link to="/books">Books list</Link>
+          <br />
+          <Link to="/authors">Authors list</Link>
+        </div>
+        {props.children}
+      </Container>
+    </div>
+  );
+};

@@ -23,7 +23,7 @@
   "devDependencies": {},
   "scripts": {
     "start":
-      "concurrently \"PORT=8080 npm run server\" \"REACT_APP_API_URL=localhost:8080 npm run dev\"",
+      "concurrently \"PORT=8080 npm run server\" \"REACT_APP_API_URL=http://localhost:8080 npm run dev\"",
     "server": "node app.js",
     "dev": "react-scripts start",
     "build": "react-scripts build",
